@@ -5,7 +5,7 @@
 ### A multi-agent AI system for legal document analysis — four specialized agents collaborate in parallel to deliver compliance assessments, risk identification, strategic recommendations, and redline suggestions
 
 [![Agents](https://img.shields.io/badge/Agents-4_specialized-blue?style=for-the-badge)](#claude-code-skills)
-[![Stacks](https://img.shields.io/badge/Stacks-Python_%2B_Node.js-orange?style=for-the-badge)](#project-structure)
+[![Stack](https://img.shields.io/badge/Stack-Python_3.10%2B-orange?style=for-the-badge)](#-python-quickstart)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Built with Claude Code](https://img.shields.io/badge/Built_with-Claude_Code-D97757?logo=anthropic&logoColor=white&style=for-the-badge)](https://claude.ai/code)
 
@@ -55,14 +55,15 @@ cp -r ai-legal-team-agent/skills/* ~/.claude/skills/
 
 AI Legal Team Agent simulates a virtual legal team where specialized AI agents work together to analyze contracts, NDAs, lease agreements, and other legal documents. Upload a document, select an analysis type, and receive comprehensive findings across multiple dimensions.
 
-The project ships with **two independent versions**:
+The project ships with the following components:
 
-| Version | Stack | Entry Point |
-|---------|-------|-------------|
-| **Python / Streamlit** | Streamlit, PyPDF2, python-docx, pandas | `app.py` |
-| **Node.js / Express** | Express, React 18 (CDN), Tailwind CSS, Multer | `server.js` + `public/index.html` |
+| Component | Stack | Entry Point | Status |
+|-----------|-------|-------------|--------|
+| **Python CLI orchestrator** | Python 3.10+ (stdlib only) | `main.py` + `orchestrator.py` | ✅ Working today |
+| **Claude Code skills** | Markdown skill contracts | `skills/*/SKILL.md` | ✅ Working today |
+| **Streamlit UI** (planned) | Streamlit, PyPDF2, python-docx, pandas | — | 📋 Dependencies in `requirements.txt`; UI not yet implemented |
 
-Both versions offer the same core analysis workflow. Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** — the scaffolding is opt-in for self-hosted deployments only.
+Both surfaces share the same agent set under `agents/`. Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** — the scaffolding is opt-in for self-hosted deployments only.
 
 ---
 
@@ -142,18 +143,39 @@ The Python package itself has **zero runtime dependencies** beyond the standard 
 ai-legal-team-agent/
 ├── README.md
 ├── LICENSE
+├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── SECURITY.md
 ├── requirements.txt
-├── samples/
-│   ├── sample_nda.txt
-│   └── sample_saas_agreement.txt
-├── docs/
-│   ├── QUICKSTART.md
-│   └── EXECUTIVE_SUMMARY.md
-├── skills/
+├── main.py                       # CLI entry point
+├── orchestrator.py               # Coordinates the 4 specialist agents
+├── agents/
+│   ├── __init__.py
+│   ├── compliance_agent.py
+│   ├── risk_agent.py
+│   ├── strategy_agent.py
+│   └── redline_agent.py
+├── prompts/                      # System prompts for the real-API path
+│   ├── contract-analyst.md
+│   ├── legal-researcher.md
+│   ├── legal-strategist.md
+│   └── team-lead.md
+├── utils/
+│   └── prompts.py
+├── skills/                       # Standalone Claude Code skills
 │   ├── legal-team-lead/SKILL.md
 │   ├── contract-analyst/SKILL.md
 │   ├── legal-researcher/SKILL.md
 │   └── legal-strategist/SKILL.md
+├── samples/
+│   ├── sample_nda.txt
+│   └── sample_saas_agreement.txt
+├── docs/
+│   ├── architecture.md
+│   ├── EXECUTIVE_SUMMARY.md
+│   ├── QUICKSTART.md
+│   └── REAL_API_MODE.md
 └── screenshots/
 ```
 
@@ -163,10 +185,10 @@ ai-legal-team-agent/
 
 | Layer | Technology |
 |-------|------------|
-| Frontend (Node) | React 18 (CDN), Tailwind CSS |
-| Backend (Node) | Node.js, Express, Multer |
-| Python version | Streamlit, PyPDF2, python-docx, pandas |
-| AI (Planned) | Claude API (Anthropic) |
+| CLI orchestrator | Python 3.10+ (standard library only) |
+| Claude Code skills | Plain Markdown skill contracts |
+| Streamlit UI (planned) | Streamlit, PyPDF2, python-docx, pandas |
+| AI (planned) | Claude API (Anthropic) |
 
 ---
 
