@@ -1,5 +1,7 @@
 # Quick Start Guide - AI Legal Team Agent
 
+> **Status:** the Streamlit walk-through below is the **planned** UI flow. `app.py` and `sample_contract.txt` are not yet shipped in this repo. For the workflow that runs today, use the CLI orchestrator described in the root [README](../README.md#-python-quickstart) (`python main.py path/to/document.txt`).
+
 ## Get Started in 3 Minutes! 🚀
 
 ### Step 1: Install Dependencies
