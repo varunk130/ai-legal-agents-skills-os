@@ -7,7 +7,7 @@ We take security seriously. If you discover a vulnerability in this project, ple
 Use one of these private channels:
 
 1. **GitHub private vulnerability reporting** — open a private advisory on this repository's Security tab. This is the preferred channel.
-2. **Direct message** — reach the maintainer through the contact information on their GitHub profile.
+2. **Direct message** — reach the maintainer through the contact information on the maintainer's GitHub profile.
 
 When reporting, include:
 
