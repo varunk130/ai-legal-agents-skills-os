@@ -139,7 +139,7 @@ The Python package itself has **zero runtime dependencies** beyond the standard 
 
 ## Project Structure
 
-```
+```text
 ai-legal-team-agent/
 ├── README.md
 ├── LICENSE
