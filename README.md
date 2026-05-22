@@ -26,7 +26,7 @@
   <img src="screenshots/agent-overview.png" width="48%" alt="Overview Dashboard" />
 </p>
 
-> **⚠️ Disclaimer:** This application is a technical demonstration only and does not constitute legal advice and is not a substitute for qualified counsel. All sample contracts and analysis outputs are synthetic. Do not rely on the output of this system for legal decision-making.
+> **⚠️ Disclaimer:** This application is a technical demonstration only; it does not constitute legal advice and is not a substitute for qualified counsel. All sample contracts and analysis outputs are synthetic. Do not rely on the output of this system for legal decision-making.
 
 ---
 
