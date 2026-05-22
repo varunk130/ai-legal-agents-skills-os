@@ -56,9 +56,9 @@ I'll identify case law that:
 
 ### Step 5: Build Compliance Checklist
 Actionable items organized by:
-- **Critical** — Must address immediately (legal exposure)
-- **Important** — Should address within 30 days
-- **Advisory** — Best practices for risk reduction
+- **Critical** - Must address immediately (legal exposure)
+- **Important** - Should address within 30 days
+- **Advisory** - Best practices for risk reduction
 
 ## Example: GDPR Compliance for SaaS
 

@@ -1,6 +1,6 @@
 ---
 name: contract-analyst
-description: 'Deep contract review — extract clauses, map obligations, identify defined terms and gaps. Use when: review contract, extract clauses, obligation mapping, contract terms, payment terms, IP provisions, termination clause, indemnification.'
+description: 'Deep contract review - extract clauses, map obligations, identify defined terms and gaps. Use when: review contract, extract clauses, obligation mapping, contract terms, payment terms, IP provisions, termination clause, indemnification.'
 ---
 
 # Contract Analyst
@@ -63,9 +63,9 @@ RATIONALE: One-sided termination right; 30 days insufficient for transition.
 **Sample Clause Analysis:**
 | Clause | Category | Favorability | Risk | Issue |
 |--------|----------|-------------|------|-------|
-| Section 3.2 — Data Processing | Privacy | ⚠️ Unfavorable | High | No data deletion obligation on termination |
-| Section 5.1 — SLA | Performance | ✅ Favorable | Low | 99.9% uptime with credits |
-| Section 8.3 — Liability Cap | Protection | ⚠️ Unfavorable | Medium | Cap = 12 months fees (market standard is 24) |
-| Section 11 — Auto-Renewal | Term | 🔴 Unfavorable | High | Auto-renews with 60-day opt-out; no price cap |
+| Section 3.2 - Data Processing | Privacy | ⚠️ Unfavorable | High | No data deletion obligation on termination |
+| Section 5.1 - SLA | Performance | ✅ Favorable | Low | 99.9% uptime with credits |
+| Section 8.3 - Liability Cap | Protection | ⚠️ Unfavorable | Medium | Cap = 12 months fees (market standard is 24) |
+| Section 11 - Auto-Renewal | Term | 🔴 Unfavorable | High | Auto-renews with 60-day opt-out; no price cap |
 
 > ⚠️ Analysis for discussion purposes only. Not legal advice.

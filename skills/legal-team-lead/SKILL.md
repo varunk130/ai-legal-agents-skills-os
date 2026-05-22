@@ -5,7 +5,7 @@ description: 'Orchestrate multi-agent legal document analysis. Use when: legal a
 
 # Legal Team Lead
 
-Orchestrate a comprehensive legal document analysis by coordinating findings across compliance, contract terms, legal research, and strategic risk assessment — then synthesize into an executive report.
+Orchestrate a comprehensive legal document analysis by coordinating findings across compliance, contract terms, legal research, and strategic risk assessment - then synthesize into an executive report.
 
 ## Output
 Save to `outputs/legal-analysis-[doc]-[YYYY-MM-DD].md`
@@ -41,10 +41,10 @@ I'll identify:
 
 ### Step 3: Coordinate Analysis
 I'll run four analysis passes:
-1. **Contract Analysis** — clause extraction, obligation mapping, defined terms
-2. **Legal Research** — applicable statutes, case law, regulatory requirements
-3. **Risk Assessment** — severity rating, financial exposure, likelihood
-4. **Strategic Review** — negotiation leverage, recommended positions
+1. **Contract Analysis** - clause extraction, obligation mapping, defined terms
+2. **Legal Research** - applicable statutes, case law, regulatory requirements
+3. **Risk Assessment** - severity rating, financial exposure, likelihood
+4. **Strategic Review** - negotiation leverage, recommended positions
 
 ### Step 4: Synthesize Findings
 I'll combine all four analyses into a unified report with:
@@ -53,8 +53,8 @@ I'll combine all four analyses into a unified report with:
 - Executive summary suitable for non-legal stakeholders
 
 ## Tips
-1. **Include document type** — "This is a SaaS agreement" helps me apply the right frameworks
-2. **Flag specific concerns** — "I'm worried about the IP clause" focuses the analysis
-3. **Mention jurisdiction** — Different laws apply in different places
+1. **Include document type** - "This is a SaaS agreement" helps me apply the right frameworks
+2. **Flag specific concerns** - "I'm worried about the IP clause" focuses the analysis
+3. **Mention jurisdiction** - Different laws apply in different places
 
 > ⚠️ This skill produces analysis for discussion purposes only. Not legal advice. Consult a qualified attorney for legal decisions.

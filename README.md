@@ -2,7 +2,7 @@
 
 # ⚖️ AI Legal Team Agent
 
-### A multi-agent AI system for legal document analysis — four specialized agents collaborate in parallel to deliver compliance assessments, risk identification, strategic recommendations, and redline suggestions
+### A multi-agent AI system for legal document analysis - four specialized agents collaborate in parallel to deliver compliance assessments, risk identification, strategic recommendations, and redline suggestions
 
 [![Agents](https://img.shields.io/badge/Agents-4_specialized-blue?style=for-the-badge)](#claude-code-skills)
 [![Stack](https://img.shields.io/badge/Stack-Python_3.10%2B-orange?style=for-the-badge)](#-python-quickstart)
@@ -61,9 +61,9 @@ The project ships with the following components:
 |-----------|-------|-------------|--------|
 | **Python CLI orchestrator** | Python 3.10+ (stdlib only) | `main.py` + `orchestrator.py` | ✅ Working today |
 | **Claude Code skills** | Markdown skill contracts | `skills/*/SKILL.md` | ✅ Working today |
-| **Streamlit UI** (planned) | Streamlit, PyPDF2, python-docx, pandas | — | 📋 Dependencies in `requirements.txt`; UI not yet implemented |
+| **Streamlit UI** (planned) | Streamlit, PyPDF2, python-docx, pandas | - | 📋 Dependencies in `requirements.txt`; UI not yet implemented |
 
-Both surfaces share the same agent set under `agents/`. Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** — the scaffolding is opt-in for self-hosted deployments only.
+Both surfaces share the same agent set under `agents/`. Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** - the scaffolding is opt-in for self-hosted deployments only.
 
 ---
 
@@ -73,28 +73,28 @@ Both surfaces share the same agent set under `agents/`. Currently runs with mock
 
 Four specialized agents collaborate on every analysis, each owning a distinct perspective:
 
-- **Team Lead** — Coordinates analysis, synthesizes findings, delivers the final report
-- **Contract Analyst** — Deep-dives into contract terms, clause structure, obligations
-- **Legal Researcher** — Identifies relevant case law, statutory references, regulatory frameworks
-- **Legal Strategist** — Assesses risk exposure, develops strategic recommendations
+- **Team Lead** - Coordinates analysis, synthesizes findings, delivers the final report
+- **Contract Analyst** - Deep-dives into contract terms, clause structure, obligations
+- **Legal Researcher** - Identifies relevant case law, statutory references, regulatory frameworks
+- **Legal Strategist** - Assesses risk exposure, develops strategic recommendations
 
 → Each agent is also available as a standalone **[Claude Code Skill](skills/)**.
 
 ### Analysis Types
 
-- **Compliance Check** — Evaluate adherence to GDPR, CCPA, employment law
-- **Contract Review** — Detailed term-by-term analysis including payment and IP provisions
-- **Legal Research** — Surface relevant case law, precedents, and statutory references
-- **Risk Assessment** — Risk profiling with severity ratings and mitigation strategies
-- **Custom Query** — Ask any specific legal question about the document
+- **Compliance Check** - Evaluate adherence to GDPR, CCPA, employment law
+- **Contract Review** - Detailed term-by-term analysis including payment and IP provisions
+- **Legal Research** - Surface relevant case law, precedents, and statutory references
+- **Risk Assessment** - Risk profiling with severity ratings and mitigation strategies
+- **Custom Query** - Ask any specific legal question about the document
 
 ### Result Tabs
 
-- **Analysis** — Full agent-generated narrative with page references
-- **Key Points** — Critical terms extracted and categorized by importance
-- **Recommendations** — Prioritized action items with legal basis
-- **Redline** — Proposed changes with before/after text and visual diff
-- **Overview** — Document metrics, risk assessment summary, and charts
+- **Analysis** - Full agent-generated narrative with page references
+- **Key Points** - Critical terms extracted and categorized by importance
+- **Recommendations** - Prioritized action items with legal basis
+- **Redline** - Proposed changes with before/after text and visual diff
+- **Overview** - Document metrics, risk assessment summary, and charts
 
 ### Document Support
 
@@ -113,7 +113,7 @@ cp -r skills/* ~/.claude/skills/
 | Skill | What It Does |
 |-------|--------------|
 | [legal-team-lead](skills/legal-team-lead/SKILL.md) | Orchestrates multi-agent legal analysis, synthesizes findings |
-| [contract-analyst](skills/contract-analyst/SKILL.md) | Deep contract review — clauses, obligations, defined terms |
+| [contract-analyst](skills/contract-analyst/SKILL.md) | Deep contract review - clauses, obligations, defined terms |
 | [legal-researcher](skills/legal-researcher/SKILL.md) | Case law, statutory references, regulatory frameworks |
 | [legal-strategist](skills/legal-strategist/SKILL.md) | Risk assessment, strategic recommendations, mitigation plans |
 

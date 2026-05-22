@@ -20,9 +20,9 @@ The app will automatically open in your browser at `http://localhost:8501`
 
 ### Step 3: Try It Out!
 
-1. **Upload the Sample Document** — select `sample_contract.txt` from the project folder
-2. **Select an Analysis Type** — e.g., "Compliance Check"
-3. **Click Analyze** — watch the agents work!
+1. **Upload the Sample Document** - select `sample_contract.txt` from the project folder
+2. **Select an Analysis Type** - e.g., "Compliance Check"
+3. **Click Analyze** - watch the agents work!
 
 ### Explore the Results
 

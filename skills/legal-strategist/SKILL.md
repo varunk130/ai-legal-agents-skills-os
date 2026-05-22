@@ -54,7 +54,7 @@ I'll categorize risks across dimensions:
 
 ### Step 4: Build Mitigation Strategy
 For each risk:
-- **Accept**: Risk is within tolerance — document and monitor
+- **Accept**: Risk is within tolerance - document and monitor
 - **Mitigate**: Specific contract changes or operational controls
 - **Transfer**: Insurance, indemnification, or liability allocation
 - **Avoid**: Walk away or restructure the deal
@@ -81,8 +81,8 @@ For contract negotiations:
 | IP contamination (broad license grant) | 4 | 2 | 8 | Varies | Narrow license to necessary scope, exclude derivatives |
 
 **Negotiation Strategy:**
-- **Lead with data portability** — highest risk score, reasonable ask
-- **Bundle price cap with longer term** — vendor gets commitment, you get predictability
-- **SLA credits as minimum** — easy win, establishes precedent
+- **Lead with data portability** - highest risk score, reasonable ask
+- **Bundle price cap with longer term** - vendor gets commitment, you get predictability
+- **SLA credits as minimum** - easy win, establishes precedent
 
 > ⚠️ Strategic analysis for discussion purposes only. Not legal advice. Consult qualified counsel for decisions.

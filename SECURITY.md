@@ -1,13 +1,13 @@
 # Security Policy
 
-We take security seriously. If you discover a vulnerability in this project, please follow the process below — **do not open a public GitHub issue.**
+We take security seriously. If you discover a vulnerability in this project, please follow the process below - **do not open a public GitHub issue.**
 
 ## Reporting a vulnerability
 
 Use one of these private channels:
 
-1. **GitHub private vulnerability reporting** — open a private advisory on this repository's Security tab. This is the preferred channel.
-2. **Direct message** — reach the maintainer through the contact information on the maintainer's GitHub profile.
+1. **GitHub private vulnerability reporting** - open a private advisory on this repository's Security tab. This is the preferred channel.
+2. **Direct message** - reach the maintainer through the contact information on the maintainer's GitHub profile.
 
 When reporting, include:
 
@@ -30,7 +30,7 @@ Only the latest commit on `main` is actively supported. Older releases are not p
 
 ## Out of scope
 
-- Vulnerabilities in third-party dependencies — please report those upstream first; we will track the impact here once confirmed.
+- Vulnerabilities in third-party dependencies - please report those upstream first; we will track the impact here once confirmed.
 - Issues requiring physical access to a developer's machine.
 - Social engineering attacks.
 - Findings from automated scanners without a working proof-of-concept.

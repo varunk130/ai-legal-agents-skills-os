@@ -43,9 +43,9 @@ swap it for an LLM call when you need broader recall.
 Weights the presence of indemnity, liability cap, termination, warranty,
 force-majeure, and remedy language. Produces a numeric score and a band:
 
-- **low** — score < 3.5
-- **medium** — 3.5 ≤ score < 7.0
-- **high** — score ≥ 7.0
+- **low** - score < 3.5
+- **medium** - 3.5 ≤ score < 7.0
+- **high** - score ≥ 7.0
 
 The thresholds are configurable on `RiskAgent`.
 
@@ -72,7 +72,7 @@ justification.
 
 `LegalTeamOrchestrator` runs all four agents on the document and
 assembles a `LegalReport` containing the unified summary plus the raw
-artifacts from each agent. It does not interpret the results — that is
+artifacts from each agent. It does not interpret the results - that is
 the caller's job.
 
 ## Data flow
@@ -97,6 +97,6 @@ the caller's job.
 
 ## Non-goals
 
-- Producing legal advice — the agent helps lawyers and PMs triage faster, not replace them.
-- 100% recall on compliance findings — the heuristic layer is a first pass.
-- Document parsing — the team operates on plain text; bring your own extractor.
+- Producing legal advice - the agent helps lawyers and PMs triage faster, not replace them.
+- 100% recall on compliance findings - the heuristic layer is a first pass.
+- Document parsing - the team operates on plain text; bring your own extractor.

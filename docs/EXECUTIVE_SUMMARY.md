@@ -1,8 +1,8 @@
-# Executive Summary — AI Legal Team Agent
+# Executive Summary - AI Legal Team Agent
 
 ## The Problem
 
-Legal teams spend 60-80% of their time on document review — extracting clauses, checking compliance, identifying risks, and drafting recommendations. A single contract review can take 4-6 hours of associate time. At scale (200+ contracts per quarter), this creates bottlenecks, increases error rates, and drives up costs.
+Legal teams spend 60-80% of their time on document review - extracting clauses, checking compliance, identifying risks, and drafting recommendations. A single contract review can take 4-6 hours of associate time. At scale (200+ contracts per quarter), this creates bottlenecks, increases error rates, and drives up costs.
 
 ## The Solution
 

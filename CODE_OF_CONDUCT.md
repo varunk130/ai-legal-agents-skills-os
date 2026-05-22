@@ -5,7 +5,7 @@ This project welcomes contributors of all backgrounds and skill levels. We're co
 ## Expected behavior
 
 - Be respectful in conversations, reviews, and issues.
-- Assume good intent — clarify before reacting.
+- Assume good intent - clarify before reacting.
 - Focus feedback on the work, not the person.
 - Be patient with newcomers; everyone was new once.
 - Credit prior work and collaborators.
@@ -39,7 +39,7 @@ When reporting, please include:
 
 ## Scope
 
-This Code of Conduct applies to all project spaces — issues, pull requests, discussions, code reviews, and any official communication channels — and to any individual representing the project in public spaces.
+This Code of Conduct applies to all project spaces - issues, pull requests, discussions, code reviews, and any official communication channels - and to any individual representing the project in public spaces.
 
 ## Acknowledgment
 
