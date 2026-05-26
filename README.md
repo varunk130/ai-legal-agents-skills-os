@@ -63,7 +63,7 @@ The project ships with the following components:
 | **Claude Code skills** | Markdown skill contracts | `skills/*/SKILL.md` | ✅ Working today |
 | **Streamlit UI** (planned) | Streamlit, PyPDF2, python-docx, pandas | - | 📋 Dependencies in `requirements.txt`; UI not yet implemented |
 
-Both surfaces share the same agent set under `agents/`. Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** - the scaffolding is opt-in for self-hosted deployments only.
+Both surfaces implement the same four-agent team pattern, with the Python orchestrator under `agents/` and the Claude Code skill contracts under `skills/`. Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** - the scaffolding is opt-in for self-hosted deployments only.
 
 ---
 
