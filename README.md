@@ -73,7 +73,7 @@ Both surfaces implement the same four-agent team pattern, with the Python orches
 
 Four specialized agents collaborate on every analysis, each owning a distinct perspective:
 
-- **Team Lead** - Coordinates analysis, synthesizes findings, delivers the final report
+- **Legal Team Lead** - Coordinates analysis, synthesizes findings, delivers the final report
 - **Contract Analyst** - Deep-dives into contract terms, clause structure, obligations
 - **Legal Researcher** - Identifies relevant case law, statutory references, regulatory frameworks
 - **Legal Strategist** - Assesses risk exposure, develops strategic recommendations
