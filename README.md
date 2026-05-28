@@ -192,7 +192,7 @@ ai-legal-team-agent/
 
 ---
 
-## Related work
+## Related Work
 
 Part of a portfolio of AI agent and skill libraries for product, GTM, and decision-making teams.
 
