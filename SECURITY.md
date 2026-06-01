@@ -19,7 +19,7 @@ When reporting, include:
 
 ## What to expect
 
-- **Acknowledgement** within 7 days
+- **Acknowledgment** within 7 days
 - A **triage decision** (accepted, needs more info, out of scope) within 14 days
 - A **coordinated disclosure timeline** once the issue is confirmed
 - **Public credit** in the release notes (with your consent)
