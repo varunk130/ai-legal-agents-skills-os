@@ -72,7 +72,7 @@ Both surfaces ship four-agent teams, organised slightly differently: the Python 
 | `agents/strategy_agent.py`   | `skills/legal-team-lead/`       | Synthesised recommendation and prioritised action plan        |
 | `agents/redline_agent.py`    | `skills/contract-analyst/`      | Clause-level redlines and term-by-term review                 |
 
-Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** - the scaffolding is opt-in for self-hosted deployments only.
+Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** — the scaffolding is opt-in for self-hosted deployments only.
 
 ---
 
