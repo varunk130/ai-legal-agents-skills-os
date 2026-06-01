@@ -63,13 +63,13 @@ The project ships with the following components:
 | **Claude Code skills** | Markdown skill contracts | `skills/*/SKILL.md` | ✅ Working today |
 | **Streamlit UI** (planned) | Streamlit, PyPDF2, python-docx, pandas | - | 📋 Dependencies in `requirements.txt`; UI not yet implemented |
 
-Both surfaces ship four-agent teams, organised slightly differently: the Python orchestrator under `agents/` is split by analysis output (compliance, risk, strategy, redline), while the Claude Code skill contracts under `skills/` are split by role (team lead, contract analyst, legal researcher, legal strategist). The mapping between the two views is:
+Both surfaces ship four-agent teams, organized slightly differently: the Python orchestrator under `agents/` is split by analysis output (compliance, risk, strategy, redline), while the Claude Code skill contracts under `skills/` are split by role (team lead, contract analyst, legal researcher, legal strategist). The mapping between the two views is:
 
 | Python agent (output-shaped) | Claude Code skill (role-shaped) | Primary deliverable |
 |------------------------------|---------------------------------|---------------------|
 | `agents/compliance_agent.py` | `skills/legal-researcher/`      | Regulatory / statutory compliance findings (GDPR, CCPA, etc.) |
 | `agents/risk_agent.py`       | `skills/legal-strategist/`      | Risk profile with severity ratings and mitigations            |
-| `agents/strategy_agent.py`   | `skills/legal-team-lead/`       | Synthesised recommendation and prioritised action plan        |
+| `agents/strategy_agent.py`   | `skills/legal-team-lead/`       | Synthesized recommendation and prioritized action plan        |
 | `agents/redline_agent.py`    | `skills/contract-analyst/`      | Clause-level redlines and term-by-term review                 |
 
 Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** — the scaffolding is opt-in for self-hosted deployments only.
