@@ -87,7 +87,7 @@ Everything else - routing, response shaping, error display, mock-mode detection 
 Out of scope for this commit, but listed so future work has a clear target:
 
 - [ ] Wire the actual Claude API request inside the four `analyze` seams
-- [ ] Add a streaming response variant so the UI can show partial output (similar to the pattern used in [multi-ai-agent-pm-team#8](https://github.com/varunk130/multi-ai-agent-pm-team/issues/8))
+- [ ] Add a streaming response variant so the UI can show partial output (similar to the streaming pattern in [ai-pm-agents-suite](https://github.com/varunk130/ai-pm-agents-suite))
 - [ ] Add a `prompts/CHANGELOG.md` so prompt versions have human-readable history
 - [ ] Add per-session token accounting + a configurable per-session cap
 - [ ] Add a `--smoke-test` CLI flag that issues one minimal request to verify connectivity without running a full analysis
