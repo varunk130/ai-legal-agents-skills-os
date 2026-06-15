@@ -1,242 +1,178 @@
-<div align="center">
+<p align="center">
+  <img src="public/hero.svg" alt="AI Legal Agents OS — the agentic operating system for legal work" width="100%" />
+</p>
 
-# ⚖️ AI Legal Team Agent
-
-### A multi-agent AI system for legal document analysis - four specialized agents collaborate in parallel to deliver compliance assessments, risk identification, strategic recommendations, and redline suggestions
-
-[![Agents](https://img.shields.io/badge/Agents-4_specialized-blue?style=for-the-badge)](#claude-code-skills)
-[![Stack](https://img.shields.io/badge/Stack-Python_3.10%2B-orange?style=for-the-badge)](#-python-quickstart)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
-[![Built with Claude Code](https://img.shields.io/badge/Built_with-Claude_Code-D97757?logo=anthropic&logoColor=white&style=for-the-badge)](https://claude.ai/code)
-
-**Maintained by [Varun Kulkarni](https://github.com/varunk130)** · [Quick Start ↓](#-quick-start) · [Skills ↓](#claude-code-skills) · [Python ↓](#-python-quickstart)
-
-</div>
-
----
-
-![AI Legal Team Agent Dashboard](screenshots/ai-legal-agent-team-dashboard.png)
+<h1 align="center">⚖️ AI Legal Agents OS</h1>
 
 <p align="center">
-  <img src="screenshots/analysis-complete.png" width="48%" alt="Analysis Results" />
-  <img src="screenshots/agent-recommendations.png" width="48%" alt="Recommendations" />
+  <strong>Agents · Skills · an operating system for legal work.</strong><br/>
+  One master AI agent that runs the whole legal workflow — intake, review, redline,
+  negotiate, comply, research, diligence and obligation tracking — not just a chat box.
 </p>
 
 <p align="center">
-  <img src="screenshots/agent-overview.png" width="48%" alt="Overview Dashboard" />
+  <img alt="Next.js 16" src="https://img.shields.io/badge/Next.js-16-000000?logo=nextdotjs&logoColor=white" />
+  <img alt="React 19" src="https://img.shields.io/badge/React-19-149ECA?logo=react&logoColor=white" />
+  <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white" />
+  <img alt="Tailwind CSS v4" src="https://img.shields.io/badge/Tailwind_CSS-v4-38BDF8?logo=tailwindcss&logoColor=white" />
+  <img alt="MCP Apps SEP-1865" src="https://img.shields.io/badge/MCP_Apps-SEP--1865-7a2e1e" />
+  <img alt="Status: Demo" src="https://img.shields.io/badge/status-demo-2f5a3a" />
 </p>
 
-> **⚠️ Disclaimer:** This application is a technical demonstration only; it does not constitute legal advice and is not a substitute for qualified counsel. All sample contracts and analysis outputs are synthetic. Do not rely on the output of this system for legal decision-making.
+> **Demonstration only. Not legal advice.** All contracts, parties, regulations,
+> metrics and outputs are **synthetic** and generated for showcase purposes. The app
+> runs entirely on **deterministic mocks** — there are **no real LLM or external API
+> calls**.
 
 ---
 
-## ⚡ Quick Start
+AI Legal Agents OS pairs two strengths in one workflow:
+
+- **Productivity at scale** — review, research, redlining and repeatable workflow agents across large document sets.
+- **Compliant-by-design** — regulations encoded as machine-checkable rules, applied proactively, with cited findings and AI-to-AI oversight.
+
+## ✨ The four surfaces
+
+| Page | What it is |
+| --- | --- |
+| **`/` Home** | The pitch: Problem · Extent · Impact · ROI · Solution. |
+| **`/how-it-works` How it works** | The architecture: a layered stack, an SVG flow diagram (agent → MCP connectors → retrieval/RAG → model), the request lifecycle, and a now-vs-next roadmap. |
+| **`/agent` Master Agent** | One conversational agent (M365-Copilot style) that **performs all 9 jobs**, streams its skills executing, and renders a verified, cited artifact for each. |
+| **`/evals` Evals** | A golden-set evaluation harness scored by an LLM-as-a-judge across six dimensions. |
+
+## 🧠 The 9 jobs to be done (the skills)
+
+One master agent orchestrates nine specialist skills. Each is a deterministic skill in
+`lib/agent/skills.ts` that emits a console trace and a typed artifact, every result
+carrying an executive summary with **inline citations** (SEC EDGAR, GDPR, Cornell LII),
+severity/score charts and an explicit **recommended changes + next steps** block.
+
+| # | Skill | Job to be done | Artifact |
+| --- | --- | --- | --- |
+| ⟢ | **Triage** | Classify, prioritize and route an inbound request | Matter card |
+| ❖ | **Review** | Surface risks and required changes fast | Risk review |
+| ✎ | **Redline** | Mark up a counterparty draft to our standard | Redline set |
+| ⇄ | **Negotiate** | Work approved fallbacks, never below walk-away | Negotiation log |
+| § | **Comply** | Check clauses against regulation-as-code | Compliance report |
+| 📑 | **Research** | Citation-backed answers you can defend | Research memo |
+| ▦ | **Diligence** | Extract terms and red flags across many contracts | Diligence matrix |
+| ◷ | **Track** | Track obligations, renewals and termination windows | Obligation schedule |
+| ✓ | **Guardian** | Verify citations, consistency and safety of every output | Guardian verdict |
+
+## ⚙️ How it works
+
+A **planner-orchestrated master agent** turns the scattered legal workflow into a single
+conversation:
+
+```
+            ┌──────────────────────────────────────────────────────────┐
+  Matter →  │  Master Agent (plan · route)                              │
+            │     │                                                     │
+            │     ├─▶ MCP connectors  ── tools & data (synthetic)       │
+            │     ├─▶ Retrieval / RAG ── grounding + citations          │
+            │     ├─▶ Frontier model  ── reasoning                      │
+            │     └─▶ Skills (×9)      ── each emits a typed artifact    │
+            │                    │                                       │
+            │            Guardian (verify) ── citations · safety         │
+            └──────────────────────────────────────────────────────────┘
+                                 │
+                    Verified, cited, execution-ready package
+```
+
+1. **Bring the matter.** Drop in a contract, a request, or a question. The agent classifies it and sets priority and SLA.
+2. **The agent plans & routes.** It decomposes the job and dispatches the right specialist skills — like an M365 Copilot agent running tools.
+3. **Skills execute.** Each skill runs deterministically and emits a real artifact: redline set, compliance report, research memo, obligation schedule.
+4. **Guardian verifies & ships.** An AI-to-AI guardian checks citations, consistency and safety, then assembles an audit-trailed package. Evals score it continuously.
+
+The `/how-it-works` page renders this as a live SVG flow diagram, with an explicit
+**now (mocked) vs. next (wired)** roadmap.
+
+## 🔌 MCP & MCP Apps
+
+The master agent connects to its tools and data through the **Model Context Protocol
+(MCP)** — the open, JSON-RPC 2.0–based standard for wiring agents to external systems. In
+this showcase the connectors are deterministic **(mock) MCP servers**, but the shape is
+real:
+
+| MCP server | Tools it exposes | Used by |
+| --- | --- | --- |
+| **Contract & Data-Room MCP** | `fetch_document` · `list_data_room` · `extract_clauses` | triage · review · diligence |
+| **Regulation MCP** (regulation-as-code) | `get_rule_pack` · `check_clause` · `cite_finding` | comply |
+| **Legal Research MCP** (SEC EDGAR, Cornell LII) | `search_caselaw` · `fetch_citation` · `summarize_authority` | research |
+| **Playbook MCP** | `get_redline_standard` · `get_fallback_ladder` · `score_position` | redline · negotiate |
+| **Obligations & CLM MCP** | `extract_obligations` · `schedule_renewal` · `assemble_package` | track · guardian |
+
+**MCP Apps in the response.** Every artifact the agent returns — risk review, redline set,
+compliance charts, obligation schedule, guardian verdict — is rendered as an **MCP App**
+via the **MCP Apps extension (SEP-1865)**. Each skill's tool advertises a UI resource
+through `_meta.ui/resourceUri` (a `ui://…` URI), served as `text/html;profile=mcp-app` and
+rendered inline by the host in a **sandboxed iframe**. Actions inside a widget (approve a
+redline, drill into a citation) call back over **JSON-RPC 2.0 `postMessage`**, which the
+host proxies to the MCP server — so the response is interactive, not static.
+
+**Standards it's based on:** the [Model Context Protocol](https://modelcontextprotocol.io)
+(JSON-RPC 2.0) and the [MCP Apps extension — SEP-1865](https://github.com/modelcontextprotocol/ext-apps),
+finalized in late 2025 and backed by Anthropic and OpenAI.
+
+> All MCP servers here are synthetic and deterministic — no real systems are contacted and
+> no network calls are made.
+
+## 🕹️ Try it
+
+In the **Agent** page, click a job in the left rail, use a suggested prompt, or ask in
+plain language, e.g.:
+
+- "Triage the new SaaS agreement"
+- "Redline it as the customer"
+- "Check it against GDPR"
+- "Negotiate the liability cap"
+- **"Run the full end-to-end mission"** — chains triage → review → redline → compliance → negotiation → verify into one package.
+- **📎 Upload a document** — pick one of five synthetic contracts; the agent connects to its (mock) MCP connectors and returns a cited risk review.
+
+In the **Evals** page, press **Run evaluation** to run the golden set of 20 prompts through
+an LLM-as-a-judge and watch per-dimension scores, verdicts and judge rationales stream in.
+
+## 🎨 Tech & design
+
+- **Next.js 16** (App Router) · **React 19** · **TypeScript** · **Tailwind CSS v4**.
+- Distinctive **"law-library" theme** (oxblood, brass, parchment, ink) with an optional dark **"chambers"** mode — deliberately nothing like a generic IDE theme.
+- Fonts: **Fraunces** (display), **Inter** (body), **JetBrains Mono** (console).
+- Fully client-side and deterministic — reproducible and credit-free.
+
+## 🚀 Run locally
+
+This repo is a self-contained Next.js app:
 
 ```bash
-# 1. Clone the repo
-git clone https://github.com/varunk130/ai-legal-team-agent.git
-
-# 2. Install the four legal agents as Claude Code skills
-mkdir -p ~/.claude/skills
-cp -r ai-legal-team-agent/skills/* ~/.claude/skills/
-
-# 3. In Claude Code, ask any of:
-#      "Run a compliance check on this NDA against GDPR"
-#      "Use the contract-analyst skill to redline this SaaS agreement"
-#      "Have the legal-researcher pull case law on enforceability"
+npm install
+npm run dev      # http://localhost:3000 (or the next free port)
+npm run build    # production build
+npm run lint
 ```
 
-> 💡 For the Python CLI orchestrator (no Claude Code required), see [🐍 Python Quickstart](#-python-quickstart) below.
-> For the detailed setup guide, see [docs/QUICKSTART.md](docs/QUICKSTART.md).
+## 🗂️ Project structure
 
----
-
-## Overview
-
-AI Legal Team Agent simulates a virtual legal team where specialized AI agents work together to analyze contracts, NDAs, lease agreements, and other legal documents. Upload a document, select an analysis type, and receive comprehensive findings across multiple dimensions.
-
-The project ships with the following components:
-
-| Component | Stack | Entry Point | Status |
-|-----------|-------|-------------|--------|
-| **Python CLI orchestrator** | Python 3.10+ (stdlib only) | `main.py` + `orchestrator.py` | ✅ Working today |
-| **Claude Code skills** | Markdown skill contracts | `skills/*/SKILL.md` | ✅ Working today |
-| **Streamlit UI** (planned) | Streamlit, PyPDF2, python-docx, pandas | - | 📋 Dependencies in `requirements.txt`; UI not yet implemented |
-
-Both surfaces ship four-agent teams, organized slightly differently: the Python orchestrator under `agents/` is split by analysis output (compliance, risk, strategy, redline), while the Claude Code skill contracts under `skills/` are split by role (team lead, contract analyst, legal researcher, legal strategist). The mapping between the two views is:
-
-| Python agent (output-shaped) | Claude Code skill (role-shaped) | Primary deliverable |
-|------------------------------|---------------------------------|---------------------|
-| `agents/compliance_agent.py` | `skills/legal-researcher/`      | Regulatory / statutory compliance findings (GDPR, CCPA, etc.) |
-| `agents/risk_agent.py`       | `skills/legal-strategist/`      | Risk profile with severity ratings and mitigations            |
-| `agents/strategy_agent.py`   | `skills/legal-team-lead/`       | Synthesized recommendation and prioritized action plan        |
-| `agents/redline_agent.py`    | `skills/contract-analyst/`      | Clause-level redlines and term-by-term review                 |
-
-Currently runs with mock AI responses; the path from mock to a real Claude API integration is documented in [`docs/REAL_API_MODE.md`](docs/REAL_API_MODE.md), with per-agent system prompts decoupled into [`prompts/`](prompts/) and a single `analyze()` seam per backend ready to wire up. **No external API calls are wired in this codebase today** — the scaffolding is opt-in for self-hosted deployments only.
-
----
-
-## Features
-
-### Multi-Agent Collaboration
-
-Four specialized agents collaborate on every analysis, each owning a distinct perspective:
-
-- **Legal Team Lead** - Coordinates analysis, synthesizes findings, delivers the final report
-- **Contract Analyst** - Deep-dives into contract terms, clause structure, obligations
-- **Legal Researcher** - Identifies relevant case law, statutory references, regulatory frameworks
-- **Legal Strategist** - Assesses risk exposure, develops strategic recommendations
-
-→ Each agent is also available as a standalone **[Claude Code Skill](skills/)**.
-
-### Analysis Types
-
-- **Compliance Check** - Evaluate adherence to GDPR, CCPA, employment law
-- **Contract Review** - Detailed term-by-term analysis including payment and IP provisions
-- **Legal Research** - Surface relevant case law, precedents, and statutory references
-- **Risk Assessment** - Risk profiling with severity ratings and mitigation strategies
-- **Custom Query** - Ask any specific legal question about the document
-
-### Result Tabs
-
-- **Analysis** - Full agent-generated narrative with page references
-- **Key Points** - Critical terms extracted and categorized by importance
-- **Recommendations** - Prioritized action items with legal basis
-- **Redline** - Proposed changes with before/after text and visual diff
-- **Overview** - Document metrics, risk assessment summary, and charts
-
-### Document Support
-
-Upload and analyze **PDF**, **TXT**, and **DOCX** files. Sample contracts (NDA, SaaS agreement) included for testing.
-
----
-
-## Claude Code Skills
-
-Each agent is available as a standalone Claude Code skill:
-
-```bash
-cp -r skills/* ~/.claude/skills/
 ```
-
-| Skill | What It Does |
-|-------|--------------|
-| [legal-team-lead](skills/legal-team-lead/SKILL.md) | Orchestrates multi-agent legal analysis, synthesizes findings |
-| [contract-analyst](skills/contract-analyst/SKILL.md) | Deep contract review - clauses, obligations, defined terms |
-| [legal-researcher](skills/legal-researcher/SKILL.md) | Case law, statutory references, regulatory frameworks |
-| [legal-strategist](skills/legal-strategist/SKILL.md) | Risk assessment, strategic recommendations, mitigation plans |
-
----
-
-## 🐍 Python Quickstart
-
-This repo also ships a lightweight Python package (`agents/`, `orchestrator.py`, `main.py`) for running the legal-team agents directly from the command line, independent of any UI layer.
-
-Requires **Python 3.10+** (uses `dataclasses`, PEP 604 unions, and PEP 585 generics).
-
-```bash
-# Run the orchestrator on a contract
-python main.py path/to/contract.txt
-
-# Or get JSON output
-python main.py path/to/contract.txt --json
-```
-
-The Python package itself has **zero runtime dependencies** beyond the standard library; `requirements.txt` covers the optional UI/demo extras.
-
----
-
-## Project Structure
-
-```text
-ai-legal-team-agent/
-├── README.md
-├── LICENSE
-├── CHANGELOG.md
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── SECURITY.md
-├── requirements.txt
-├── main.py                       # CLI entry point
-├── orchestrator.py               # Coordinates the 4 specialist agents
-├── agents/
-│   ├── __init__.py
-│   ├── compliance_agent.py
-│   ├── risk_agent.py
-│   ├── strategy_agent.py
-│   └── redline_agent.py
-├── prompts/                      # System prompts for the real-API path
-│   ├── contract-analyst.md
-│   ├── legal-researcher.md
-│   ├── legal-strategist.md
-│   └── team-lead.md
-├── utils/
-│   └── prompts.py
-├── skills/                       # Standalone Claude Code skills
-│   ├── legal-team-lead/SKILL.md
-│   ├── contract-analyst/SKILL.md
-│   ├── legal-researcher/SKILL.md
-│   └── legal-strategist/SKILL.md
-├── samples/
-│   ├── sample_nda.txt
-│   └── sample_saas_agreement.txt
-├── docs/
-│   ├── architecture.md
-│   ├── EXECUTIVE_SUMMARY.md
-│   ├── QUICKSTART.md
-│   └── REAL_API_MODE.md
-└── screenshots/
+app/                 Home, /how-it-works, /agent, /evals + root layout + theme
+components/
+  agent/             Console, streaming skill-run card, artifact card, doc picker
+  evals/             Eval flow diagram + interactive dashboard
+  how-it-works/      Architecture SVG flow diagram
+  brand, nav, footer, theme provider/toggle, home/reveal
+lib/
+  brand.ts           Product copy, the 9 JTBDs and ROI
+  types.ts           Shared artifact / chat / run types
+  architecture.ts    How-it-works stack, connectors and lifecycle data
+  agent/
+    data.ts          Synthetic contracts, playbook, GDPR rule-pack, case law, data room
+    documents.ts     Five synthetic legal documents for upload
+    skills.ts        The 9 deterministic JTBD skills + the end-to-end mission
+    engine.ts        Intent router (message → skill)
+    guidance.ts      Derives recommended changes + next steps per artifact
+  evals/
+    suites.ts        Golden set (20 prompts) + LLM-as-a-judge scoring
 ```
 
 ---
 
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| CLI orchestrator | Python 3.10+ (standard library only) |
-| Claude Code skills | Plain Markdown skill contracts |
-| Streamlit UI (planned) | Streamlit, PyPDF2, python-docx, pandas |
-| AI (planned) | Claude API (Anthropic) |
-
----
-
-## Related Work
-
-Part of a portfolio of AI agent and skill libraries for product, GTM, and decision-making teams.
-
-**Discovery & research**
-
-- [ai-customer-discovery-skills](https://github.com/varunk130/ai-customer-discovery-skills) - Turn raw customer signal into validated product opportunities (5 of 12 shipped)
-- [jtbd-extractor](https://github.com/varunk130/ai-customer-discovery-skills/tree/main/skills/jtbd-extractor) - Extract Jobs-to-be-Done statements from research, with opportunity scoring
-
-**Strategy & decisions**
-
-- [claude-code-skills](https://github.com/varunk130/claude-code-skills) - 29 production-grade skills for finance, product, strategy, and game theory
-- [AI-Builder-Decision-Analyst](https://github.com/varunk130/AI-Builder-Decision-Analyst) - 11 skills that catch bad bets before you ship across DECIDE / BUILD / COMMUNICATE / LEARN
-
-**Go-to-market**
-
-- [ai-gtm-skill-library](https://github.com/varunk130/ai-gtm-skill-library) - 31 opinionated GTM skills across the full discover -> renew lifecycle
-- [ai-marketing-claude-skills](https://github.com/varunk130/ai-marketing-claude-skills) - 12 marketing-ops skills with scoring algorithms and statistical frameworks
-- [ai-partner-ecosystem-analysis](https://github.com/varunk130/ai-partner-ecosystem-analysis) - Deep research on any ISV, partner, or competitor with a 1-slide PPTX output
-
-**UX & design**
-
-- [ai-ux-skill-library](https://github.com/varunk130/ai-ux-skill-library) - 12 frameworks for designing UX for AI products, agents, and AI-powered experiences
-
-**Multi-agent demos**
-
-- [ai-pm-agents-suite](https://github.com/varunk130/ai-pm-agents-suite) - 6-agent pipeline plus 3 standalone PM agents (decision engine, financial analyst, stakeholder translator) that turn customer feedback into strategy, PRDs, and comms
-
-**Evaluation & operations**
-
-- [AI-Eval-Skills](https://github.com/varunk130/AI-Eval-Skills) - 6 skills to plan, generate, run, interpret, and triage AI agent evaluations
-- [ai-workflow-playbooks](https://github.com/varunk130/ai-workflow-playbooks) - 21 playbooks + 10 skills + 4 guardians + 5 runbooks across the 7-stage delivery pipeline
-
----
-
-<p align="center">
-  <strong>Built by Varun Kulkarni</strong><br/>
-  <sub>Powered by Claude Code Opus 4.7 + GitHub Copilot</sub>
-</p>
+<p align="center"><sub>Built as an internal showcase. Synthetic data · deterministic mocks · not legal advice.</sub></p>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 440" width="1280" height="440" role="img" aria-label="AI Legal Agents OS — the agentic operating system for legal work">
+  <defs>
+    <linearGradient id="parch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6eedd"/>
+      <stop offset="1" stop-color="#efe3c9"/>
+    </linearGradient>
+    <linearGradient id="brass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b8893a"/>
+      <stop offset="0.5" stop-color="#d8b65e"/>
+      <stop offset="1" stop-color="#b8893a"/>
+    </linearGradient>
+    <linearGradient id="pillar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7a2e1e"/>
+      <stop offset="1" stop-color="#5e2018"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1280" height="440" fill="url(#parch)"/>
+  <!-- subtle horizontal rules (library lines) -->
+  <g stroke="#e2d3b2" stroke-width="1">
+    <line x1="0" y1="92" x2="1280" y2="92"/>
+    <line x1="0" y1="348" x2="1280" y2="348"/>
+  </g>
+  <!-- brass top & bottom rules -->
+  <rect x="0" y="0" width="1280" height="6" fill="url(#brass)"/>
+  <rect x="0" y="386" width="1280" height="54" fill="#1c1714"/>
+
+  <!-- emblem -->
+  <g transform="translate(96,150)">
+    <circle cx="44" cy="44" r="44" fill="#1c1714"/>
+    <circle cx="44" cy="44" r="44" fill="none" stroke="url(#brass)" stroke-width="2"/>
+    <text x="44" y="62" font-family="Georgia, 'Times New Roman', serif" font-size="46" fill="#d8b65e" text-anchor="middle">&#9878;</text>
+  </g>
+
+  <!-- wordmark -->
+  <text x="216" y="170" font-family="Georgia, 'Times New Roman', serif" font-size="58" font-weight="600" fill="#1c1714">AI Legal Agents <tspan fill="#8a3a22">OS</tspan></text>
+  <text x="218" y="214" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-style="italic" fill="#6f5a3a">The agentic operating system for legal work.</text>
+  <text x="220" y="256" font-family="'JetBrains Mono','Courier New',monospace" font-size="14.5" letter-spacing="3" fill="#8a7350">ONE MASTER AGENT  &#183;  NINE SKILLS  &#183;  COMPLIANT BY DESIGN</text>
+
+  <!-- colonnade of 9 skill pillars -->
+  <g transform="translate(792,120)">
+    <g font-family="Georgia, serif" font-size="22" fill="#f6eedd" text-anchor="middle">
+      <g>
+        <rect x="0"   y="0" width="40" height="208" rx="4" fill="url(#pillar)"/>
+        <rect x="44"  y="0" width="40" height="208" rx="4" fill="#b8893a"/>
+        <rect x="88"  y="0" width="40" height="208" rx="4" fill="url(#pillar)"/>
+        <rect x="132" y="0" width="40" height="208" rx="4" fill="#b8893a"/>
+        <rect x="176" y="0" width="40" height="208" rx="4" fill="url(#pillar)"/>
+        <rect x="220" y="0" width="40" height="208" rx="4" fill="#b8893a"/>
+        <rect x="264" y="0" width="40" height="208" rx="4" fill="url(#pillar)"/>
+        <rect x="308" y="0" width="40" height="208" rx="4" fill="#b8893a"/>
+        <rect x="352" y="0" width="40" height="208" rx="4" fill="url(#pillar)"/>
+      </g>
+      <g font-size="20">
+        <text x="20"  y="120" fill="#f6eedd">&#10210;</text>
+        <text x="64"  y="120" fill="#3a1c12">&#10070;</text>
+        <text x="108" y="120" fill="#f6eedd">&#9998;</text>
+        <text x="152" y="120" fill="#3a1c12">&#8644;</text>
+        <text x="196" y="120" fill="#f6eedd">&#167;</text>
+        <text x="240" y="120" fill="#3a1c12">&#9745;</text>
+        <text x="284" y="120" fill="#f6eedd">&#9638;</text>
+        <text x="328" y="120" fill="#3a1c12">&#9719;</text>
+        <text x="372" y="120" fill="#f6eedd">&#10003;</text>
+      </g>
+    </g>
+    <!-- base plinth -->
+    <rect x="-12" y="208" width="416" height="14" rx="3" fill="#1c1714"/>
+  </g>
+
+  <!-- bottom ribbon: the nine jobs -->
+  <text x="640" y="419" font-family="'JetBrains Mono','Courier New',monospace" font-size="13.5" letter-spacing="2.5" fill="#d8b65e" text-anchor="middle">TRIAGE &#183; REVIEW &#183; REDLINE &#183; NEGOTIATE &#183; COMPLY &#183; RESEARCH &#183; DILIGENCE &#183; TRACK &#183; GUARDIAN</text>
+</svg>

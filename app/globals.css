@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+/* Class-based dark ("chambers") mode toggle */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains);
+
+  /* Brand palette — "law library": oxblood, brass, parchment, ink */
+  --color-oxblood: #5b1320;
+  --color-oxblood-dark: #410c16;
+  --color-bordeaux: #7a1d2b;
+  --color-claret: #9c2a39;
+  --color-brass: #b8893a;
+  --color-brass-bright: #d6a64e;
+  --color-gold: #d8b34a;
+  --color-parchment: #f4ead6;
+  --color-ivory: #fbf7ec;
+  --color-vellum: #ece0c8;
+  --color-ink: #211610;
+  --color-ink-soft: #5b4a3c;
+  --color-chambers: #15110d;
+  --color-chambers-2: #1f1812;
+  --color-chambers-3: #2b2118;
+  --color-verdict: #2f6b4f;
+  --color-caution: #b8893a;
+  --color-breach: #a32b35;
+
+  /* Semantic, theme-reactive tokens */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border-soft: var(--border-soft);
+  --color-text: var(--text);
+  --color-text-soft: var(--text-soft);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+}
+
+:root {
+  --bg: #f7f0e1;
+  --surface: #fffdf7;
+  --surface-2: #f4ead6;
+  --border-soft: #e3d5b8;
+  --text: #211610;
+  --text-soft: #6a584a;
+  --accent: #5b1320;
+  --accent-2: #b8893a;
+}
+
+.dark {
+  --bg: #15110d;
+  --surface: #1f1812;
+  --surface-2: #2b2118;
+  --border-soft: #3a2c20;
+  --text: #f1e7d6;
+  --text-soft: #bdab94;
+  --accent: #c0414c;
+  --accent-2: #d6a64e;
+}
+
+* {
+  border-color: var(--border-soft);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(900px 500px at 12% -8%, color-mix(in srgb, var(--accent) 9%, transparent), transparent),
+    radial-gradient(800px 480px at 100% 0%, color-mix(in srgb, var(--accent-2) 12%, transparent), transparent);
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: color-mix(in srgb, var(--accent-2) 35%, transparent);
+  color: var(--text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, "Times New Roman", serif;
+}
+
+.font-mono {
+  font-family: var(--font-jetbrains), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Thin brass scrollbars */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--accent-2) 45%, transparent);
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.15; }
+}
+
+.animate-rise { animation: rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.animate-fade { animation: fade 0.4s ease-out both; }
+.animate-blink { animation: blink 1s steps(2, start) infinite; }
+
+.hairline {
+  background-image: linear-gradient(90deg, transparent, color-mix(in srgb, var(--accent-2) 60%, transparent), transparent);
+}
+
+.card-ring {
+  box-shadow: 0 1px 0 0 color-mix(in srgb, var(--accent-2) 18%, transparent) inset,
+    0 18px 40px -28px rgba(0, 0, 0, 0.55);
+}
