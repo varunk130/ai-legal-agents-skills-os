@@ -260,7 +260,7 @@ export function guidanceFor(artifact: Artifact): Guidance {
           {
             action: "Approve the redline set",
             where: "Liability, indemnity, IP & term clauses",
-            target: "Customer-favourable, market-standard positions",
+            target: "Customer-favorable, market-standard positions",
             priority: "now",
           },
           {

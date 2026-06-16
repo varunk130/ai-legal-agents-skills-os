@@ -28,7 +28,7 @@ export const DOCUMENTS: LegalDoc[] = [
     value: "$184,000 / yr",
     pages: 14,
     summary:
-      "Inbound vendor paper for a cloud analytics subscription. Heavily provider-favourable: unlimited customer liability, no data-protection addendum, and provider ownership of derived data.",
+      "Inbound vendor paper for a cloud analytics subscription. Heavily provider-favorable: unlimited customer liability, no data-protection addendum, and provider ownership of derived data.",
     overallRisk: "High",
     clauses: [
       { ref: "8.1", title: "Limitation of Liability", text: "In no event shall Provider's aggregate liability be limited; Customer's liability shall be unlimited.", severity: "critical", finding: "Customer liability is unlimited and Provider liability is uncapped." },

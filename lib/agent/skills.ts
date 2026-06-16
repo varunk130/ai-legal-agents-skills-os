@@ -139,7 +139,7 @@ const C = {
     id,
     source: "Indemnification — Cornell LII (Wex)",
     href: "https://www.law.cornell.edu/wex/indemnification",
-    note: "Mutual, bounded indemnities are favoured.",
+    note: "Mutual, bounded indemnities are favored.",
   }),
   ftc: (id: number) => ({
     id,
