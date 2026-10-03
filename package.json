@@ -1,8 +1,14 @@
 {
   "name": "ai-legal-agents-skills-os",
   "version": "0.1.0",
+  "description": "AI Legal Agents OS - an agentic operating system for legal work: agents and skills that draft, review, and reason over legal documents.",
   "private": true,
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varunk130/ai-legal-agents-skills-os.git"
+  },
+  "homepage": "https://github.com/varunk130/ai-legal-agents-skills-os#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
