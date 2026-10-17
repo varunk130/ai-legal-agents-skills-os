@@ -37,7 +37,7 @@ AI Legal Agents OS pairs two strengths in one workflow:
 | --- | --- |
 | **`/` Home** | The pitch: Problem · Extent · ROI · Impact · Solution. |
 | **`/how-it-works` How it works** | The architecture: a layered stack, an SVG flow diagram (agent → MCP connectors → retrieval/RAG → model), the request lifecycle, and a now-vs-next roadmap. |
-| **`/agent` Master Agent** | One conversational agent (M365-Copilot style) that **performs all 9 jobs**, streams its skills executing, and renders a verified, cited artifact for each. |
+| **`/agent` Master Agent** | One conversational agent (M365 Copilot-style) that **performs all 9 jobs**, streams its skills executing, and renders a verified, cited artifact for each. |
 | **`/evals` Evals** | A golden-set evaluation harness scored by an LLM-as-a-judge across six dimensions. |
 
 ## 🧠 The 9 jobs to be done (the skills)
