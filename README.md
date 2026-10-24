@@ -57,7 +57,7 @@ severity/score charts and an explicit **recommended changes + next steps** block
 | 📑 | **Research** | Citation-backed answers you can defend | Research memo |
 | ▦ | **Diligence** | Extract terms and red flags across many contracts | Diligence matrix |
 | ◷ | **Track** | Track obligations, renewals and termination windows | Obligation schedule |
-| ✓ | **Guardian** | Verify citations, consistency and safety of every output | Guardian verdict |
+| ✓ | **Guardian** | Verify citations, consistency and safety of every output | Guardian verification |
 
 ## ⚙️ How it works
 
