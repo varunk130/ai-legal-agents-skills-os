@@ -311,7 +311,7 @@ export function EvalsDashboard() {
             {full.pass} passed, {full.warn} warning(s), {full.fail} failed across{" "}
             {full.total} cases · {full.totalTokens.toLocaleString()} tokens judged. The
             failure (EV-08) is a real catch — the agent over-conceded past the approved
-            negotiation fallback, which the Safety dimension correctly penalised.
+            negotiation fallback, which the Safety dimension correctly penalized.
           </p>
         </div>
       )}
