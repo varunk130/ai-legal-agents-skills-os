@@ -473,13 +473,13 @@ export function runComply(): SkillRun {
     title: "Compliance-by-design check",
     plan: [
       "Load the regulation as a machine-checkable rule-pack",
-      "Normalise the contract text for evaluation",
+      "Normalize the contract text for evaluation",
       "Evaluate every rule and cite the article",
       "Score compliance and propose remedies",
     ],
     console: [
       { kind: "tool", label: "load_rulepack()", detail: `→ ${GDPR_RULEPACK.name} · 5 rules` },
-      { kind: "io", label: "normalize_text()", detail: "→ 6 clauses tokenised" },
+      { kind: "io", label: "normalize_text()", detail: "→ 6 clauses tokenized" },
       { kind: "tool", label: "eval(Art.28(3))", detail: "→ FAIL · no DPA present" },
       { kind: "tool", label: "eval(Art.28(2))", detail: "→ FAIL · sub-processors without notice" },
       { kind: "tool", label: "eval(Ch.V)", detail: "→ FAIL · transfers to 'any jurisdiction'" },
