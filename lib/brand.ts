@@ -180,7 +180,7 @@ export const JTBDS: JTBD[] = [
     jtbd: "When I get a counterparty draft, mark it up to our standard with every edit justified.",
     skill: "redline",
     glyph: "✎",
-    prompt: "Redline the SaaS agreement as the Customer.",
+    prompt: "Redline the SaaS agreement as the customer.",
     aligns: "Playbook redlines",
   },
   {
