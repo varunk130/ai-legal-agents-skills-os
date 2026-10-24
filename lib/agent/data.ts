@@ -181,7 +181,7 @@ export const GDPR_RULEPACK: { name: string; rules: RegRule[] } = {
       id: "art28-subproc",
       ref: "GDPR Art. 28(2)",
       href: "https://gdpr-info.eu/art-28-gdpr/",
-      rule: "Sub-processors require prior authorisation and notice with objection rights.",
+      rule: "Sub-processors require prior authorization and notice with objection rights.",
       test: (t) =>
         t.includes("without notice") || t.includes("sole discretion")
           ? "fail"
