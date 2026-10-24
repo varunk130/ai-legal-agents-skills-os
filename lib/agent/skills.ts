@@ -672,7 +672,7 @@ export function runMission(): SkillRun[] {
     matter: `${SAAS_AGREEMENT.id} · ${SAAS_AGREEMENT.counterparty}`,
     summary: `Assembled an execution-ready package for ${SAAS_AGREEMENT.id}: five guardian-verified artifacts — triage, risk review, redline, compliance and negotiation — addressing five risks, with obligations queued and a full audit trail.`,
     produced: [
-      { label: "Triage card", skill: "triage" },
+      { label: "Matter card", skill: "triage" },
       { label: "Risk review", skill: "review" },
       { label: "Redline set", skill: "redline" },
       { label: "Compliance report", skill: "comply" },
