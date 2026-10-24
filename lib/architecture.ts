@@ -118,7 +118,7 @@ export const CONNECTORS: Connector[] = [
 export const RETRIEVAL_PIPELINE = [
   { step: "Ingest", body: "Pull documents from the CLM, research and rule-pack sources." },
   { step: "Chunk", body: "Split into clause- and section-aware passages." },
-  { step: "Embed", body: "Vectorise passages and store in the index." },
+  { step: "Embed", body: "Vectorize passages and store in the index." },
   { step: "Search", body: "Hybrid semantic + keyword query at run time." },
   { step: "Rerank", body: "Score and order the most relevant passages." },
   { step: "Ground", body: "Attach citations the guardian can verify." },
